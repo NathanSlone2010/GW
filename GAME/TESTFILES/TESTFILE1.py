@@ -37,7 +37,7 @@ if startg not in ["Y", "N"]:
 #STARTS THE PROGRAM
 
 
-print("THE GREAT WAR, Version 01.00.00")
+print("\n\nTHE WAR OF COLLAPSE, Version 01.01.00")
 print("VOID STUDIOS COPYRIGHT 2026")
 print("WELCOME TO THE LAND OF ZABEROTH, SOLDIER.")
 
@@ -62,3 +62,32 @@ if statg == "N":
 	print("\nAlright then...\n")
 if statg not in ["Y", "N"]:
 	print("\nASSUMING NO, THEN?")
+
+
+print("\nWhat is your desired name?")
+name = input("NAME: ")
+
+print("\nAre you ready to start the war, soldier?")
+start = input("[CHOICE] ").upper()
+
+if start == "Y":
+      print("Onward, soldiers! Fight for your nation!")
+if start == "N":
+      print("You are not willing to fight for your nation, even though you willingly signed?! Treasonist!\n")
+
+time.sleep(3); print("\n\n\nThrough the charge of time, our nation has done many, many thing. As a child, I used to be proud of her... No more... There is nothing of her left that is to be.")
+print("\nA man walks in. 'Sir, they breached the gates. More reinforcements will pile in!'")
+print(f"\n'Well, {name}, ready?")
+
+print("1. Pick up sword")
+print("2. Pick up dagger")
+print("3. Pick up bow")
+weapon = input("[INPUT] ")
+
+
+if weapon == "1":
+    time.sleep(0.5); print("You grab the sword, taking a look at it... [YOU] I am ready, Commander Newman")
+if weapon == "2":
+    time.sleep(0.5); print("You grab the dagger, taking it in your hand, allowing blood to come out. [YOU] Yes, sir, I am ready.")
+if weapon == "3":
+    time.sleep(0.5); print("You pick up the bow, grabbing the quiver alongside it. [YOU] Yes, Commander.. I am ready.")
