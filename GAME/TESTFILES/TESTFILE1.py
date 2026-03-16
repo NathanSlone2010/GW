@@ -37,7 +37,7 @@ if startg not in ["Y", "N"]:
 #ALLOWS USER TO CHOOSE TO START OR NOT
 
 
-print("\n\nTHE WAR OF COLLAPSE, Version 01.02.00")
+print("\n\nTHE WAR OF COLLAPSE, Alpha Build")
 print("VOID STUDIOS COPYRIGHT 2026")
 #This is the introduction
 
