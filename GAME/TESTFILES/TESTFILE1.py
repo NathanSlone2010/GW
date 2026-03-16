@@ -21,25 +21,26 @@ elif current_os == "Linux":
 	print("LINUX KERNEL BASED OPERATING SYSTEM")
 elif current_os not in ["Windows", "iOS", "NetBSD", "FreeBSD", "OpenBSD", "Linux"]:
 	print("UNKNOWN OPERATING SYSTEM. REPORT OS TO DEV FOR INTEGRATION.")
+#This allows user to know the program is running correctly
 
 
 time.sleep(0.5); print("\nSTART GAME? Y/N")
 startg = input("[INPUT] ").upper()
-#ALLOWS USER TO CHOOSE TO START OR NOT
 
-
+if startg == "Y":
+        print("STARTING PROGRAM.")
 if startg == "N":
 	time.sleep(0.5); print("RETURN WHEN YOU ARE READY.")
 	sys.exit()
-
 if startg not in ["Y", "N"]:
 	print("INVALID, ASSUMING PLAYER IS READY")
-#STARTS THE PROGRAM
+#ALLOWS USER TO CHOOSE TO START OR NOT
 
 
-print("\n\nTHE WAR OF COLLAPSE, Version 01.01.00")
+print("\n\nTHE WAR OF COLLAPSE, Version 01.02.00")
 print("VOID STUDIOS COPYRIGHT 2026")
-print("WELCOME TO THE LAND OF ZABEROTH, SOLDIER.")
+#This is the introduction
+
 
 health = 150
 damage = 25
@@ -50,6 +51,7 @@ king_health = 200
 queen_health = 200
 royalguard_health = 50
 grunt_health = 20
+#These are the required variables
 
 
 print(f"\nHere are your statistics, soldier! HEALTH: {health} | DAMAGE: {damage}")
@@ -62,19 +64,33 @@ if statg == "N":
 	print("\nAlright then...\n")
 if statg not in ["Y", "N"]:
 	print("\nASSUMING NO, THEN?")
+#This allows players to see the statistics
 
 
-print("\nWhat is your desired name?")
-name = input("NAME: ")
+while True:
+    print("\nWhat is your desired name?")
+    name = input("NAME: ")
+    print(f"SELECTION: {name}. Wish to change it? Y/N")
+    cname = input("NAME CHANGE? ").upper()
+    if cname == "Y":
+      print("Please select the right name and continue.")
+    if cname == "N":
+      break
+#Allows name input
 
-print("\nAre you ready to start the war, soldier?")
-start = input("[CHOICE] ").upper()
+
+print(f"\nAre you ready to start the war, {name}?")
+start = input("[CHOICE, Y/N] ").upper()
 
 if start == "Y":
       print("Onward, soldiers! Fight for your nation!")
 if start == "N":
       print("You are not willing to fight for your nation, even though you willingly signed?! Treasonist!\n")
+      sys.exit()
+#This truly starts the story.
 
+
+#---Start of Choice Set 1: Wars---
 time.sleep(3); print("\n\n\nThrough the charge of time, our nation has done many, many thing. As a child, I used to be proud of her... No more... There is nothing of her left that is to be.")
 print("\nA man walks in. 'Sir, they breached the gates. More reinforcements will pile in!'")
 print(f"\n'Well, {name}, ready?")
@@ -91,3 +107,20 @@ if weapon == "2":
     time.sleep(0.5); print("You grab the dagger, taking it in your hand, allowing blood to come out. [YOU] Yes, sir, I am ready.")
 if weapon == "3":
     time.sleep(0.5); print("You pick up the bow, grabbing the quiver alongside it. [YOU] Yes, Commander.. I am ready.")
+if weapon not in ["1", "2", "3"]:
+    print("That is not a choice! skipping!")
+#---Choice set 1 End---
+
+#---Choice set 2 start: Warriors---
+time.sleep(1.8); print(f"\n\n'W@k3 up! Wak3 4p!' You feel a sharp pain... 'About damn time you woke the fuck up. You took a good beating.... Someone check out {name}. I have to check out the others!'")
+time.sleep(0.5); print(f"\n'{name}, can you hear at least modertly?' Y/N/Not sure[NS]")
+choice2 = input("[INPUT] ").upper()
+
+if choice2 == "Y":
+      print(f"[YOU] Y-Yes. Holy fuck, what happened?")
+      print(f"'A bloody mess, {name}. Lucky your ass lived. Even if barely.'")
+if choice2 == "N":
+      print(f"'Fuck me.. Well, you answered my qeustion, good enough for the corps, good enough for me.. Get on your feet, soldier.'")
+if choice2 == "NS":
+      print(f"'Damnit. How? You slow in the head..? Do not answer that...'")
+#---Choice set 2 end---
