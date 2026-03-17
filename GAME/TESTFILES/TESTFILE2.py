@@ -131,14 +131,21 @@ health -= final_damage
 damage_enemy = random.randint(1, damage) * 2
 royalguard_health -= damage_enemy
 #remember: "final_damage" & "health" is the variables.
+
 print("\n2 Days pass. They demoted you for failire to operate machinery and sent you to the Additional Combat Training zone...")
-print("\n\nAlright. The way the game is built, damage is random and within 1-25 for you, and larger for others. As said in the statistics in the earlier games... Like this: ")
+time.sleep(1); print("\n\nAlright. The way the game is built, damage is random and within 1-25 for you, and larger for others. As said in the statistics in the earlier games... Like this: ")
 print(f"{final_damage} and {health}.")
-print("But, don't worry, health resets after every choice. Though, reaching zero is still a problem depending in the enemy!")
+time.sleep(1); print("But, don't worry, health resets after every choice. Though, reaching zero is still a problem depending in the enemy!")
 print("\n\nReady? Attack the Royal Guard! [TYPE 1]")
 train = input("[HERE] ")
 
 if train == "1":
-    print(f"{royalguard_health}. See! It is easy!")
+	time.sleep(1.2); print(f"{royalguard_health}. See! It is easy!")
 print("\nNow! the enemy will attack you!")
-print(f"{health}. See? That is how the game works. Simple, yes, but good? Hopefully!")
+time.sleep(2.1); print(f"{health}. See? That is how the game works. Simple, yes, but good? Hopefully!")
+
+if train not in ["1"]:
+	time.sleep(1); print("Really? Won't make a choice? Fine. If you don't want to read [which is entirely the game], we'll move along.")
+
+time.sleep(0.5); print(f"\n\nWell... Training is over, for now, ladies! [Hopefully I integrated the tutorial into the story well, {name}!")
+#---Choice set 3 end---
