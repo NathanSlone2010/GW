@@ -1,0 +1,159 @@
+import time
+import sys
+import os
+import random
+import platform
+#REQUIRED MODULES
+
+
+time.sleep(1); print("N0 ERRORS FOUND")
+#This allows user to know the program is running correctly
+
+
+time.sleep(0.5); print("\nSTART GAME? Y/N")
+startg = input("[INPUT] ").upper()
+
+if startg == "Y":
+        print("STARTING PROGRAM.")
+if startg == "N":
+	time.sleep(0.5); print("RETURN WHEN YOU ARE READY.")
+	sys.exit()
+if startg not in ["Y", "N"]:
+	print("INVALID, ASSUMING PLAYER IS READY")
+#ALLOWS USER TO CHOOSE TO START OR NOT
+
+
+print("\n\nTHE WAR OF COLLAPSE, 01.00.00 Build")
+print("VOID STUDIOS COPYRIGHT 2026")
+#This is the introduction
+
+
+health = 150
+damage = 25
+soldier_health = 100
+general_health = 150
+boss_health = 155
+king_health = 200
+queen_health = 200
+royalguard_health = 50
+grunt_health = 20
+#These are the required variables
+
+
+print(f"\nHere are your statistics, soldier! HEALTH: {health} | DAMAGE: {damage}")
+print("Would you like the enemy statistics? Y/N")
+statg = input("[INPUT] ").upper()
+
+if statg == "Y":
+	print(f"\nSOLDIER HEALTH: {soldier_health} | GENERAL HEALTH: {general_health} | BOSS HEALTH: {boss_health} | KING HEALTH: {king_health} | QUEEN HEALTH: {queen_health} | ROYAL GUARD HEALTH: {royalguard_health} | GRUNT HEALTH: {grunt_health}\n")
+if statg == "N":
+	print("\nAlright then...\n")
+if statg not in ["Y", "N"]:
+	print("\nASSUMING NO, THEN?")
+#This allows players to see the statistics
+
+
+while True:
+    print("\nWhat is your desired name?")
+    name = input("NAME: ").upper()
+    print(f"SELECTION: {name}. Wish to change it? Y/N")
+    cname = input("NAME CHANGE? ").upper()
+    if cname == "Y":
+      print("Please select the right name and continue.")
+    if cname == "N":
+      break
+#Allows name input
+
+
+print(f"\nAre you ready to start the war, {name}?")
+start = input("[CHOICE, Y/N] ").capitalize()
+
+if start == "Y":
+      print("Onward, soldiers! Fight for your nation!")
+if start == "N":
+      print("You are not willing to fight for your nation, even though you willingly signed?! Treasonist!\n")
+      sys.exit()
+#This truly starts the story.
+
+
+#---Start of Choice Set 1: Wars---
+time.sleep(3); print("\n\n\nThrough the charge of time, our nation has done many, many thing. As a child, I used to be proud of her... No more... There is nothing of her left that is to be.")
+print("\nA man walks in. 'Sir, they breached the gates. More reinforcements will pile in!'")
+print(f"\n'Well, {name}, ready?")
+
+print("1. Pick up sword")
+print("2. Pick up dagger")
+print("3. Pick up bow")
+weapon = input("[INPUT] ")
+
+
+if weapon == "1":
+    time.sleep(0.5); print("You grab the sword, taking a look at it... [YOU] I am ready, Commander Newman")
+if weapon == "2":
+    time.sleep(0.5); print("You grab the dagger, taking it in your hand, allowing blood to come out. [YOU] Yes, sir, I am ready.")
+if weapon == "3":
+    time.sleep(0.5); print("You pick up the bow, grabbing the quiver alongside it. [YOU] Yes, Commander.. I am ready.")
+if weapon not in ["1", "2", "3"]:
+    print("That is not a choice! skipping!")
+#---Choice set 1 End---
+
+
+#---Choice set 2 start: Warriors---
+time.sleep(1.8); print(f"\n\n'W@k3 up! Wak3 4p!' You feel a sharp pain... 'About damn time you woke the fuck up. You took a good beating.... Someone check out {name}. I have to check out the others!'")
+time.sleep(0.5); print(f"\n'{name}, can you hear at least modertly?' Y/N/Not sure[NS]")
+choice2 = input("[INPUT] ").upper()
+
+if choice2 == "Y":
+      print(f"[YOU] Y-Yes. Holy fuck, what happened?")
+      print(f"'A bloody mess, {name}. Lucky your ass lived. Even if barely.'")
+if choice2 == "N":
+      print(f"'Fuck me.. Well, you answered my qeustion, good enough for the corps, good enough for me.. Get on your feet, soldier.'")
+if choice2 == "NS":
+      print(f"'Damnit. How? You slow in the head..? Do not answer that...'")
+#---Choice set 2 end---
+
+
+#---Choice set 3 start: Training---
+final_damage = random.randint(1, damage) * 2
+health -= final_damage
+damage_enemy = random.randint(1, damage) * 2
+royalguard_health -= damage_enemy
+#remember: "final_damage" & "health" is the variables.
+
+print("\n2 Days pass. They demoted you for failire to operate machinery and sent you to the Additional Combat Training zone...")
+time.sleep(1); print("\n\nAlright. The way the game is built, damage is random and within 1-25 for you, and larger for others. As said in the statistics in the earlier games... Like this: ")
+print(f"{final_damage} and {health}.")
+time.sleep(1); print("But, don't worry, health resets after every choice. Though, reaching zero is still a problem depending in the enemy!")
+print("\n\nReady? Attack the Royal Guard! [TYPE 1]")
+train = input("[HERE] ")
+
+if train == "1":
+	time.sleep(1.2); print(f"{royalguard_health}. See! It is easy!")
+print("\nNow! the enemy will attack you!")
+time.sleep(2.1); print(f"{health}. See? That is how the game works. Simple, yes, but good? Hopefully!")
+
+if train not in ["1"]:
+	time.sleep(1); print("Really? Won't make a choice? Fine. If you don't want to read [which is entirely the game], we'll move along.")
+
+time.sleep(0.5); print(f"\nWell... Training is over, for now, ladies! [Hopefully I integrated the tutorial into the story well, {name}!")
+#---Choice set 3 end---
+
+
+#---Choice set 4 start: Shift---
+print("\n\nWeeks pass by, you are in a foreign land... [YOU] So.. How do I look?'")
+print(f"'Well, {name}, do not look like you are from this time, but better! So how did you end up almost 2 thousand years into the future?'")
+print("\n[YOU] Well, it is a long story.. I was in battle after being demoted, eventually we came across what you call a metaphysical anomaly. They sent me.... I ended up here..")
+print(f"Damn.. {name}... If that is all true, I guess you can.. help me with my homework. It should be around your time...")
+print("\nHELP")
+print("REFUSE")
+help = input("INPUT [TYPE THE WORD]: ").upper()
+
+if help == "HELP":
+      print("[YOU] Sure, Angela, just let me know when you want or need any help. You have helped me out a lot!")
+
+if help == "REFUSE":
+      print("[YOU] Sorry, I cannot, even back in my time, cheating was very bad..!")
+
+if help not in ["HELP", "REFUSE"]:
+      print("I will skip since you do not want to make a choice!!")
+#---Choice set 4 end---
